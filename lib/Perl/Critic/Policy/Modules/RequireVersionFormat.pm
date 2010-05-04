@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use base
     qw(Perl::Critic::Policy::Modules::RequireVersionVar Perl::Critic::Policy);
-use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM };
+use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
 use Data::Dumper;
 use Carp qw(carp);
@@ -34,10 +34,6 @@ my @parsable_tokens = qw(
     PPI::Token::Number::Float
     PPI::Token::Number::Version
 );
-my $ignore_quotes = 1;
-my $format        = '\A\d+\.\d+(_\d+)?\z';
-
-#-----------------------------------------------------------------------------
 
 sub violates {
     my ( $self, $elem, $doc ) = @_;
@@ -54,15 +50,34 @@ sub violates {
         ( $version_spec, $separator ) = $self->_extract_version($tokens);
     }
 
-    if ( $version_spec and $ignore_quotes and $separator ) {
+    if ( $version_spec and $self->{_strict_quotes} and $separator ) {
+        if ( $separator ne q{'} ) {
+            return $self->violation( $DESC, $EXPL, $doc );
+        }
+    }
+
+    if ( $version_spec and $self->{_ignore_quotes} and $separator ) {
         $version_spec =~ s/$separator//xsmg;
     }
 
-    if ( $version_spec and $version_spec !~ m/$format/xsm ) {
-        return $self->violation( $DESC, $EXPL, $doc );
+    foreach my $format ( @{ $self->{_formats} } ) {
+        if ( $version_spec and $version_spec !~ m/$format/xsm ) {
+            return $self->violation( $DESC, $EXPL, $doc );
+        }
     }
 
     return;
+}
+
+sub initialize_if_enabled {
+    my ( $self, $config ) = @_;
+
+    $self->{_strict_quotes} = $config->get('strict_quotes') || 0;
+    $self->{_ignore_quotes} = $config->get('ignore_quotes') || 1;
+    $self->{_formats}       = $config->get('formats')
+        || [qw(\A\d+\.\d+(_\d+)?\z)];
+
+    return $TRUE;
 }
 
 sub _extract_version {
