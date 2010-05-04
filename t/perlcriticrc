@@ -1,0 +1,23 @@
+
+# $Id$
+
+severity = 1
+verbose  = 8
+
+#------------------------------------------------------------------------------
+
+[CodeLayout::RequireTidyCode]
+
+[Documentation::RequirePodSections]
+lib_sections    = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
+script_sections = NAME|DESCRIPTION|SYNOPSIS|AUTHOR|COPYRIGHT
+
+[Miscellanea::RequireRcsKeywords]
+keywords = Id
+
+[CodeLayout::ProhibitHardTabs]
+allow_leading_tabs = 0
+
+[-ValuesAndExpressions::ProhibitConstantPragma]
+
+[-NamingConventions::Capitalization]
