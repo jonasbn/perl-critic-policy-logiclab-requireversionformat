@@ -19,6 +19,7 @@ my $build = Module::Build->new(
         resources => {
             homepage => 'http://logiclab.jira.com/wiki/display/PCPMRVF/Home',
             repository => 'http://logicLAB.jira.com/svn/PCPMRVF',
+			ProjectSite => 'http://logicLAB.jira.com/browse/PCPMRVF',
         }
     },
 );
