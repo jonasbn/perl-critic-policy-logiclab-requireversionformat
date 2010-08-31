@@ -1,13 +1,11 @@
 
-#!start included /Library/Perl/Updates/5.10.0/ExtUtils/MANIFEST.SKIP
+#!start included /System/Library/Perl/5.10.0/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
 \bCVS\b
 \bSCCS\b
 ,v$
 \B\.svn\b
-\B\.git\b
-\B\.gitignore\b
 \b_darcs\b
 
 # Avoid Makemaker generated and utility files.
@@ -32,7 +30,7 @@
 
 # Avoid Devel::Cover files.
 \bcover_db\b
-#!end included /Library/Perl/Updates/5.10.0/ExtUtils/MANIFEST.SKIP
+#!end included /System/Library/Perl/5.10.0/ExtUtils/MANIFEST.SKIP
 
 # Avoid configuration metadata file
 ^MYMETA\.
