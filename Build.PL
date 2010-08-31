@@ -8,6 +8,7 @@ use Module::Build;
 my $build = Module::Build->new(
     dist_author          => 'Jonas B. Nielsen, <jonasbn@cpan.org>',
     module_name          => 'Perl::Critic::Policy::Modules::RequireVersionFormat',
+	dist_abstract        => 'a simple policy enforcing strict version formatting',
     license              => 'artistic',
     recursive_test_files => 0,
     create_makefile_pl   => 'traditional',
