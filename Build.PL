@@ -19,8 +19,13 @@ my $build = Module::Build->new(
     meta_merge => {
         resources => {
             homepage => 'http://logiclab.jira.com/wiki/display/PCPMRVF/Home',
+            bugtracker =>
+                'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat',
             repository => 'http://logicLAB.jira.com/svn/PCPMRVF',
-			ProjectSite => 'http://logicLAB.jira.com/browse/PCPMRVF',
+            ProjectChangelog =>
+                'http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel',
+            ProjectSite => 'http://logicLAB.jira.com/browse/PCPMRVF',
+            ProjectWiki => 'http://logiclab.jira.com/wiki/display/PCPMRVF/Home',
         }
     },
 );
