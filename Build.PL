@@ -14,7 +14,10 @@ my $build = Module::Build->new(
     create_makefile_pl   => 'traditional',
     create_readme        => 1,
     requires => {
-        'Data::Dumper' => '0', #Debugging
+		'List::MoreUtils'     => '0',
+		'Perl::Critic'        => '0',
+		'Perl::Critic::Utils' => '0',
+		'Test::Perl::Critic'  => '0',
     },
     meta_merge => {
         resources => {
