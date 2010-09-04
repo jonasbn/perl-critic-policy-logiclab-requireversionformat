@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::Modules::RequireVersionFormat;
+package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
 # $Id$
 
@@ -140,7 +140,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::Modules::RequireVersionFormat
+Perl::Critic::Policy::logicLAB::RequireVersionFormat
 
 =head1 SYNOPSIS
 

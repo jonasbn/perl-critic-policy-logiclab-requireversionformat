@@ -5,12 +5,12 @@ use strict;
 use warnings;
 use Test::More tests => 42;
 
-use_ok 'Perl::Critic::Policy::Modules::RequireVersionFormat';
+use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
 
 require Perl::Critic;
 my $critic = Perl::Critic->new(
     '-profile'       => '',
-    '-single-policy' => 'Modules::RequireVersionFormat'
+    '-single-policy' => 'logicLAB::RequireVersionFormat'
 );
 {
     my @p = $critic->policies;
@@ -20,7 +20,7 @@ my $critic = Perl::Critic->new(
 }
 
 #some examples lifted from:
-#http://search.cpan.org/~elliotjs/Perl-Critic-1.105/lib/Perl/Critic/Policy/Modules/RequireVersionVar.pm
+#http://search.cpan.org/~elliotjs/Perl-Critic-1.105/lib/Perl/Critic/Policy/logicLAB/RequireVersionVar.pm
 
 my @lines = <DATA>;
 my $i = 1;

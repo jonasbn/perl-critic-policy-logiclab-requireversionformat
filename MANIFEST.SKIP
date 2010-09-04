@@ -45,4 +45,7 @@
 ^MANIFEST\.SKIP
 
 # Avoid archives of this distribution
-\bPerl-Critic-Policy-Modules-RequireVersionFormat-[\d\.\_]+
+\bPerl-Critic-Policy-logicLAB-RequireVersionFormat-[\d\.\_]+
+MANIFEST
+\.komodoproject
+\.kpf
