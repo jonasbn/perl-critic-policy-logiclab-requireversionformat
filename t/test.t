@@ -21,7 +21,7 @@ my $critic = Perl::Critic->new(
 }
 
 #some examples lifted from:
-#http://search.cpan.org/~elliotjs/Perl-Critic-1.105/lib/Perl/Critic/Policy/logicLAB/RequireVersionVar.pm
+#http://search.cpan.org/~elliotjs/Perl-Critic-1.105/lib/Perl/Critic/Policy/Modules/RequireVersionVar.pm
 
 my @lines = <DATA>;
 my $i = 1;
