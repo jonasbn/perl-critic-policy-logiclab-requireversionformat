@@ -3,7 +3,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 42;
+use Test::More tests => 43;
 use Env qw($TEST_VERBOSE);
 
 use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
@@ -76,6 +76,6 @@ __DATA__
 1	our $VERSION = 1.0.611;
 1	$MyPackage::VERSION = 1.0.61;
 1	use version; our $VERSION = qv(1.0.611);
-0	Readonly our $VERSION = 1.0;
+1	Readonly our $VERSION = 1.0.1;
 1	our $VERSION = "0.01a";
 1	$VERSION = "0.01a";
