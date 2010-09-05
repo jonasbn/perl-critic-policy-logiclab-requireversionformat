@@ -152,7 +152,61 @@ This documentation describes version 0.01
 
 =head1 DESCRIPTION
 
-    
+This policy asserts that a specified version number conforms to a specified
+format.
+
+The default format is the defacto format used on CPAN. X.X and X.X_X where X
+is an arbitrary integer, in the code this is expressed using the following
+regular expression:
+
+    \A\d+\.\d+(_\d+)?\z
+
+The following example lines would adhere to this format:
+
+=over
+
+=item * 0.01, a regular release
+
+=item * 0.01_1, a developer release
+
+=back
+
+Scope, quoting and representation does not matter. If the version specification
+is lazy please see L</EXCEPTIONS>.
+
+The following example lines would not adhere to this format and would result in
+a violation.
+
+=over
+
+=item * our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
+
+=item * $VERSION = '0.0.1';
+
+=item * $MyPackage::VERSION = 1.0.61;
+
+=item * use version; our $VERSION = qv(1.0.611);
+
+=item $VERSION = "0.01a";
+
+=back
+
+In addition to the above examples, there are variations in quoting etc. all
+would cause a violation.
+
+=head2 EXCEPTIONS
+
+In addition there are some special cases, were we simply ignore the version,
+since we cannot assert it in a reasonable manner. 
+
+=over
+
+=item * our $VERSION = $Other::VERSION;
+
+We hope that $Other::VERSION conforms where defined, so we ignore for now.
+
+=back
+
 =head1 CONFIGURATION
 
 This Policy is not configurable except for the standard options.
@@ -178,6 +232,12 @@ This Policy is not configurable except for the standard options.
 This distribution has no known incompatibilities.
 
 =head1 BUGS AND LIMITATIONS
+
+I think it would be a good idea to ignore this particular version string and versions thereof:
+
+    our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
+
+I am however still undecided.
 
 =head1 BUG REPORTING
 
@@ -211,6 +271,8 @@ The following policies have been disabled for this distribution
 =over
 
 =item * I would like to integrate the features of this policy into L<Perl::Critic::Policy::Modules::RequireVersionVar>, but I was aiming for a proof of concept first - so this planned patch is still in the pipeline.
+
+=item * Address the limitation listed in L</BUGS AND LIMITATIONS>.
 
 =back
 
