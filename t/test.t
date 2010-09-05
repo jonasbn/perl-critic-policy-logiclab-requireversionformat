@@ -4,6 +4,7 @@
 use strict;
 use warnings;
 use Test::More tests => 42;
+use Env qw($TEST_VERBOSE);
 
 use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
 
@@ -29,8 +30,21 @@ foreach (@lines) {
     my @violations = $critic->critique( \$str );
     foreach (@violations) {
         is( $_->description, q{"$VERSION" variable not conforming} );
+        
+        if (0) {
+            warn "$str: $_->description\n";
+        }
     }
     is( scalar @violations, $want_count, "$i: statement: $str" );
+
+    if ($TEST_VERBOSE) {
+        if ($want_count) {
+            warn "$str does not conform\n";
+        } else {
+            warn "$str conforms\n";
+        }
+    }
+
     $i++;
 }
 
