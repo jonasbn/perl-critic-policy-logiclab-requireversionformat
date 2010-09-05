@@ -142,7 +142,9 @@ __END__
 
 Perl::Critic::Policy::logicLAB::RequireVersionFormat
 
-=head1 SYNOPSIS
+=head1 AFFILIATION
+
+This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
@@ -150,9 +152,6 @@ This documentation describes version 0.01
 
 =head1 DESCRIPTION
 
-=head1 AFFILIATION
-
-This policy is part of L<Perl::Critic::JONASBN> distribution.
     
 =head1 CONFIGURATION
 
@@ -160,17 +159,43 @@ This Policy is not configurable except for the standard options.
     
 =head1 DEPENDENCIES AND REQUIREMENTS
 
-Please see the specific policies.
+=over
+
+=item * L<Perl::Critic>
+
+=item * L<Perl::Critic::Utils>
+
+=item * L<Readonly>
+
+=item * L<Test::More>
+
+=item * L<Test::Perl::Critic>
+
+=back
 
 =head1 INCOMPATIBILITIES
 
-No known incompatibilities.
+This distribution has no known incompatibilities.
 
 =head1 BUGS AND LIMITATIONS
 
 =head1 BUG REPORTING
 
+Please use Requets Tracker for bug reporting:
+
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat
+
 =head1 TEST AND QUALITY
+
+The following policies have been disabled for this distribution
+
+=over
+
+=item * L<Perl::Crititc::Policy::ValuesAndExpressions::ProhibitConstantPragma>
+
+=item * L<Perl::Crititc::Policy::NamingConventions::Capitalization>
+
+=back
 
 =head2 TEST COVERAGE
 
@@ -183,13 +208,21 @@ No known incompatibilities.
 
 =head1 TODO
 
+=over
+
+=item * I would like to integrate the features of this policy into L<Perl::Critic::Policy::Modules::RequireVersionVar>, but I was aiming for a proof of concept first - so this planned patch is still in the pipeline.
+
+=back
+
 =head1 SEE ALSO
 
 =over
 
-=item * L<Perl::Critic>
+=item * L<http://logiclab.jira.com/wiki/display/OPEN/Versioning>
 
-=item * L<>
+=item * L<version>
+
+=item * L<http://search.cpan.org/dist/Perl-Critic/lib/Perl/Critic/Policy/Modules/RequireVersionVar.pm>
 
 =back
 
@@ -201,8 +234,10 @@ No known incompatibilities.
 
 =back
 
-=head1 COPYRIGHT
+=head1 LICENSE AND COPYRIGHT
 
-=head1 LICENSE
+Copyright (c) 2009-2010 Jonas B. Nielsen. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
 =cut
