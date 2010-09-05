@@ -209,8 +209,32 @@ We hope that $Other::VERSION conforms where defined, so we ignore for now.
 
 =head1 CONFIGURATION
 
-This Policy is not configurable except for the standard options.
-    
+=head2 strict_quotes
+
+Strict quotes is off by default.
+
+Strict quotes enforces that you version number must be quoted, like so:
+'0.01' and "0.01". 0.01 would in this case cause a violation. This
+would also go for any additional formats you could configure as valid using
+the L</formats> parameter below.
+
+=head2 ignore_quotes
+
+Ignore quotes is on by default.
+
+0.01, '0.01' and "0.01" would be interpreted as the same.
+
+Disabling ignore quotes, would mean that: '0.01' and "0.01" would violate the
+default format since quotes are not specifed as part of the pattern. This
+would also go for any additional formats you could configure as valid using
+the L</formats> parameter below.
+
+=head2 formats
+
+If no formats are specified, the policy only enforces the default format
+mentioned in L</DESCRIPTION> in combination with the above two configuration
+parameters of course.
+
 =head1 DEPENDENCIES AND REQUIREMENTS
 
 =over
