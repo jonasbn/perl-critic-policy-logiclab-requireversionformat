@@ -69,13 +69,28 @@ sub violates {
     return;
 }
 
+sub _parse_formats {
+    my ( $self, $config_string ) = @_;
+
+    my @formats = split m{ \s* [|] \s* }xms, $config_string;
+
+    return \@formats
+}
+
 sub initialize_if_enabled {
     my ( $self, $config ) = @_;
 
+    #Setting the default
+    $self->{_formats} = [qw(\A\d+\.\d+(_\d+)?\z)];
+
     $self->{_strict_quotes} = $config->get('strict_quotes') || 0;
     $self->{_ignore_quotes} = $config->get('ignore_quotes') || 1;
-    $self->{_formats}       = $config->get('formats')
-        || [qw(\A\d+\.\d+(_\d+)?\z)];
+    
+    my $formats = $config->get('formats');
+    
+    if ($formats) {
+        $self->{_formats} = $self->_parse_formats( $formats );
+    }
 
     return $TRUE;
 }
