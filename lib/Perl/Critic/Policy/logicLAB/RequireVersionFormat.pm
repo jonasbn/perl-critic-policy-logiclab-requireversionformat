@@ -18,7 +18,7 @@ Readonly::Scalar my $EXPL =>
     q{"$VERSION" variable should conform with the configured};
 Readonly::Scalar my $DESC => q{"$VERSION" variable not conforming};
 ## critic [ValuesAndExpressions::RequireInterpolationOfMetachars]
-use constant supported_parameters => ();
+use constant supported_parameters => qw(strict_quotes ignore_quotes formats);
 use constant default_severity     => $SEVERITY_MEDIUM;
 use constant default_themes       => qw(maintenance);
 use constant applies_to           => 'PPI::Document';
@@ -60,10 +60,16 @@ sub violates {
         $version_spec =~ s/$separator//xsmg;
     }
 
+    my $ok;
+
     foreach my $format ( @{ $self->{_formats} } ) {
-        if ( $version_spec and $version_spec !~ m/$format/xsm ) {
-            return $self->violation( $DESC, $EXPL, $doc );
+        if ( $version_spec and $version_spec =~ m/$format/xsm ) {
+            $ok++;
         }
+    }
+    
+    if ( $version_spec and not $ok) {
+        return $self->violation( $DESC, $EXPL, $doc );
     }
 
     return;

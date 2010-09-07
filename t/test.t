@@ -3,13 +3,26 @@
 
 use strict;
 use warnings;
-use Test::More tests => 43;
+use Test::More tests => 44;
 use Env qw($TEST_VERBOSE);
 
 use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
 
 require Perl::Critic;
+
 my $critic = Perl::Critic->new(
+    '-profile'       => 't/example.conf',
+    '-single-policy' => 'logicLAB::RequireVersionFormat'
+);
+{
+    my $str = q[$VERSION = '0.0.1'];
+    
+    my @violations = $critic->critique( \$str );
+    
+    is(scalar @violations, 0);
+}
+
+$critic = Perl::Critic->new(
     '-profile'       => '',
     '-single-policy' => 'logicLAB::RequireVersionFormat'
 );
@@ -19,6 +32,7 @@ my $critic = Perl::Critic->new(
 
     my $policy = $p[0];
 }
+
 
 #some examples lifted from:
 #http://search.cpan.org/~elliotjs/Perl-Critic-1.105/lib/Perl/Critic/Policy/Modules/RequireVersionVar.pm
