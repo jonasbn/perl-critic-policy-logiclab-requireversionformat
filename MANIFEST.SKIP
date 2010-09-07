@@ -7,6 +7,7 @@
 ,v$
 \B\.svn\b
 \b_darcs\b
+svn-commit\.*
 
 # Avoid Makemaker generated and utility files.
 \bMANIFEST\.bak
