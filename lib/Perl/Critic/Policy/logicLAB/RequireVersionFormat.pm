@@ -9,7 +9,7 @@ use base
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
 use Data::Dumper;
-use Carp qw(carp);
+use Carp qw(carp croak);
 
 our $VERSION = '0.01';
 
@@ -78,8 +78,8 @@ sub violates {
 sub _parse_formats {
     my ( $self, $config_string ) = @_;
 
-    my @formats = split m{ \s* [|] \s* }xms, $config_string;
-
+    my @formats = split m{ \s* [||] \s* }xms, $config_string;
+    
     return \@formats
 }
 
@@ -169,7 +169,7 @@ This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
-This documentation describes version 0.01
+This documentation describes version 0.02
 
 =head1 DESCRIPTION
 
@@ -263,7 +263,7 @@ mentioned in L</DESCRIPTION> in combination with the above two configuration
 parameters of course.
 
     [logicLAB::RequireVersionFormat]
-    formats = \A\d+\.\d+(_\d+)?\z | \Av\d+\.\d+\.\d+\z
+    formats = \A\d+\.\d+(_\d+)?\z || \Av\d+\.\d+\.\d+\z
 
 =head1 DEPENDENCIES AND REQUIREMENTS
 
