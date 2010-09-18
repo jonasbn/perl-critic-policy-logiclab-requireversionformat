@@ -1,0 +1,18 @@
+Changes file for Perl::Critic::Policy::logicLAB::RequireVersionFormat
+
+$Id$
+
+Release 0.02, 18.09.2010, Feature release - update recommended
+
+- Exchanged formats delimeter from '|' to '||', since '|' could be used in
+  formats, since formats are regular expressions [PCPMRVF-11]
+  http://logiclab.jira.com/browse/PCPMRVF-11
+  
+  WARNING! this might require changes to your current configuration
+
+- Corrected broken example in POD [PCPMRVF-12]
+  http://logiclab.jira.com/browse/PCPMRVF-12
+
+Release 0.01, 07.09.2010
+
+- Initial release
