@@ -48,5 +48,9 @@ svn-commit\.*
 # Avoid archives of this distribution
 \bPerl-Critic-Policy-logicLAB-RequireVersionFormat-[\d\.\_]+
 MANIFEST
+
+# Avoid project files
 \.komodoproject
 \.kpf
+\.html
+spikes
