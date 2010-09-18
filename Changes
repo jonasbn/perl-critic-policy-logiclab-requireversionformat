@@ -2,6 +2,9 @@ Changes file for Perl::Critic::Policy::logicLAB::RequireVersionFormat
 
 $Id$
 
+Project road map:
+http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel
+
 Release 0.02, 18.09.2010, Feature release - update recommended
 
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
