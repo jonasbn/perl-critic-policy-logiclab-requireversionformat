@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Data::Dumper;
 use Carp qw(carp croak);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
