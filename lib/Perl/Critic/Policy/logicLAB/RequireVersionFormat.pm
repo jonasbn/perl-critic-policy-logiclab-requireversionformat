@@ -263,7 +263,7 @@ mentioned in L</DESCRIPTION> in combination with the above two configuration
 parameters of course.
 
     [logicLAB::RequireVersionFormat]
-    formats = \A\d+\.\d+(_\d+)?\z | \Av\d+\.\d+.\d+?\z
+    formats = \A\d+\.\d+(_\d+)?\z | \Av\d+\.\d+\.\d+\z
 
 =head1 DEPENDENCIES AND REQUIREMENTS
 
