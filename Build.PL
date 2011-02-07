@@ -1,4 +1,4 @@
-# Build.PL for Perl::Critic::JONASBN
+# Build.PL for Perl::Critic::Policy::logicLAB::RequireVersionFormat
 
 # $Id$
 
@@ -16,7 +16,7 @@ my $build = Module::Build->new(
     create_readme        => 1,
     requires => {
 		'List::MoreUtils'     => '0',
-		'Perl::Critic'        => '0',
+		'Perl::Critic'        => '1.03', #REF: PCPMRVF-15
 		'Perl::Critic::Utils' => '0',
 		'Test::Perl::Critic'  => '0',
     },
