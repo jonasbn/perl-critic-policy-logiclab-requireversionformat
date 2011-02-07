@@ -5,6 +5,12 @@ $Id$
 Project Change Log:
 http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
+HEAD, Release 0.03 candidate
+
+- Addressed report on failing test, we now explicitly require Perl::Critic version 1.03 [PCPMRVF-15]
+  http://logicLAB.jira.com/browse/PCPMRVF-15
+
+
 Release 0.02, 18.09.2010, Feature release - update recommended
 
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
@@ -15,6 +21,7 @@ Release 0.02, 18.09.2010, Feature release - update recommended
 
 - Corrected broken example in POD [PCPMRVF-12]
   http://logiclab.jira.com/browse/PCPMRVF-12
+
 
 Release 0.01, 07.09.2010
 
