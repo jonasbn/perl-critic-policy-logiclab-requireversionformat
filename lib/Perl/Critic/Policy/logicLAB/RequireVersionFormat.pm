@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Data::Dumper;
 use Carp qw(carp croak);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -169,7 +169,7 @@ This policy is part of L<Perl::Critic::logicLAB> distribution.
 
 =head1 VERSION
 
-This documentation describes version 0.02
+This documentation describes version 0.03
 
 =head1 DESCRIPTION
 
