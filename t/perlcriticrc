@@ -20,3 +20,5 @@ allow_leading_tabs = 0
 [-ValuesAndExpressions::ProhibitConstantPragma]
 
 [-NamingConventions::Capitalization]
+
+[-Documentation::RequirePodLinksIncludeText]
