@@ -5,13 +5,38 @@ $Id$
 Project Change Log:
 http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
-Release 0.03, 13.02.2011 - update not required
+0.04 2013-07-28
+
+- Update not required
+
+- Fixed up Changes file as part of my Questhub quest adhering to the standard
+  described in: CPAN::Changes::Spec [PCPMRVF-19]
+
+  Quest: http://questhub.io/realm/perl/quest/51f0fd8e18ba7dcf4b000040
+  Spec: https://metacpan.org/module/CPAN::Changes::Spec
+  
+  https://logiclab.jira.com/browse/PCPMRVF-19
+
+- Perl::Critic boiler plate updated to latest version [PCPMRVF-17]
+
+  https://logiclab.jira.com/browse/PCPMRVF-17
+
+- Changes Perl::Critic theme to logicLAB as default [PCPMRVF-18]
+
+  https://logiclab.jira.com/browse/PCPMRVF-18
+
+
+0.03 2011-02-13
+
+- Update not required
 
 - Addressed report on failing test, we now explicitly require Perl::Critic version 1.03 [PCPMRVF-15]
   http://logicLAB.jira.com/browse/PCPMRVF-15
 
 
-Release 0.02, 18.09.2010, Feature release - update recommended
+0.02 2010-09-18
+
+- Feature release, Update recommended, 
 
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
   formats, since formats are regular expressions [PCPMRVF-11]
@@ -23,6 +48,6 @@ Release 0.02, 18.09.2010, Feature release - update recommended
   http://logiclab.jira.com/browse/PCPMRVF-12
 
 
-Release 0.01, 07.09.2010
+0.01 2010-09-07
 
 - Initial release
