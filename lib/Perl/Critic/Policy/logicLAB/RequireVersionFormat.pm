@@ -8,7 +8,6 @@ use base
     qw(Perl::Critic::Policy::Modules::RequireVersionVar Perl::Critic::Policy);
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
-use Data::Dumper;
 use Carp qw(carp croak);
 use 5.008;
 
