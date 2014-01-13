@@ -228,7 +228,7 @@ We hope that $Other::VERSION conforms where defined, so we ignore for now.
 
 =back
 
-=head1 CONFIGURATION
+=head1 CONFIGURATION AND ENVIRONMENT
 
 =head2 strict_quotes
 
