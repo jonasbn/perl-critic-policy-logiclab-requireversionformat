@@ -67,8 +67,8 @@ sub violates {
             $ok++;
         }
     }
-    
-    if ( $version_spec and not $ok) {
+
+    if ( $version_spec and not $ok ) {
         return $self->violation( $DESC, $EXPL, $doc );
     }
 
@@ -79,8 +79,8 @@ sub _parse_formats {
     my ( $self, $config_string ) = @_;
 
     my @formats = split m{ \s* [||] \s* }xms, $config_string;
-    
-    return \@formats
+
+    return \@formats;
 }
 
 sub initialize_if_enabled {
@@ -91,11 +91,11 @@ sub initialize_if_enabled {
 
     $self->{_strict_quotes} = $config->get('strict_quotes') || 0;
     $self->{_ignore_quotes} = $config->get('ignore_quotes') || 1;
-    
+
     my $formats = $config->get('formats');
-    
+
     if ($formats) {
-        $self->{_formats} = $self->_parse_formats( $formats );
+        $self->{_formats} = $self->_parse_formats($formats);
     }
 
     return $TRUE;
