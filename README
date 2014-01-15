@@ -51,7 +51,7 @@ DESCRIPTION
         We hope that $Other::VERSION conforms where defined, so we ignore
         for now.
 
-CONFIGURATION
+CONFIGURATION AND ENVIRONMENT
   strict_quotes
     Strict quotes is off by default.
 
