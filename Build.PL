@@ -19,6 +19,7 @@ my $build = Module::Build->new(
 		'Perl::Critic'        => '1.03', #REF: PCPMRVF-15
 		'Perl::Critic::Utils' => '0',
 		'Test::Perl::Critic'  => '0',
+        'perl'                => '5.8.0',
     },
     meta_merge => {
         resources => {
