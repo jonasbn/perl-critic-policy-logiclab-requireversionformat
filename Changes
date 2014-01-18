@@ -5,7 +5,17 @@ $Id$
 Project Change Log:
 http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
-HEAD
+0.05 2014-01-18
+
+- Maintenance release, update not required
+
+- Addressed several issues listed on CPANTS, all for version 0.04 and
+  earlier:
+
+    - missing manifest (triggering two metrics)
+    - error in pod 
+
+  http://cpants.cpanauthors.org/dist/Perl-Critic-Policy-logicLAB-RequireVersionFormat 
 
 - Added changes.t automatic assertion of the integrity of the Changes file, 
   see also PCPMRVF-19 [PCPMRVF-20]
@@ -15,7 +25,7 @@ HEAD
 
 0.04 2013-07-28
 
-- Update not required
+- Maintenance release, update not required
 
 - Fixed up Changes file as part of my Questhub quest adhering to the standard
   described in: CPAN::Changes::Spec [PCPMRVF-19]
@@ -36,7 +46,7 @@ HEAD
 
 0.03 2011-02-13
 
-- Update not required
+- Bug fix release, update not required
 
 - Addressed report on failing test, we now explicitly require Perl::Critic version 1.03 [PCPMRVF-15]
   http://logicLAB.jira.com/browse/PCPMRVF-15
@@ -44,7 +54,7 @@ HEAD
 
 0.02 2010-09-18
 
-- Feature release, Update recommended, 
+- Feature release, update recommended
 
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
   formats, since formats are regular expressions [PCPMRVF-11]
