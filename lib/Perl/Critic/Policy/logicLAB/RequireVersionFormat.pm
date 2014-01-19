@@ -208,7 +208,7 @@ a violation.
 
 =item * use version; our $VERSION = qv(1.0.611);
 
-=item $VERSION = "0.01a";
+=item * $VERSION = "0.01a";
 
 =back
 
