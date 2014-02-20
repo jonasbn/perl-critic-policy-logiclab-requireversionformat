@@ -56,3 +56,6 @@ MANIFEST\.bak
 \.kpf
 \.html
 spikes
+
+# Github - Travis integration
+\.travis\.yml
