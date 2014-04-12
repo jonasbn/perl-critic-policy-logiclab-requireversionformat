@@ -161,7 +161,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::logicLAB::RequireVersionFormat
+Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
 
 =head1 AFFILIATION
 

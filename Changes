@@ -5,6 +5,8 @@ $Id$
 Project Change Log:
 http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
+- Added abstract to POD as pointed out by CPANTS for release 0.06
+
 0.06 2014-01-24
 
 - Maintenance release, update not required
