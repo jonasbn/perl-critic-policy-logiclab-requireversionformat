@@ -28,10 +28,10 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
     - missing manifest (triggering two metrics)
     - error in POD
 
-  http://cpants.cpanauthors.org/dist/Perl-Critic-Policy-logicLAB-RequireVersionFormat 
+  http://cpants.cpanauthors.org/dist/Perl-Critic-Policy-logicLAB-RequireVersionFormat
 
-- Added changes.t automatic assertion of the integrity of the Changes file, 
-  see also PCPMRVF-19 [PCPMRVF-20]
+- Added changes.t automatic assertion of the integrity of the Changes
+  file, see also PCPMRVF-19 [PCPMRVF-20]
 
   https://logiclab.jira.com/browse/PCPMRVF-20
 
@@ -45,7 +45,7 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
 
   Quest: http://questhub.io/realm/perl/quest/51f0fd8e18ba7dcf4b000040
   Spec: https://metacpan.org/module/CPAN::Changes::Spec
-  
+
   https://logiclab.jira.com/browse/PCPMRVF-19
 
 - Perl::Critic boiler plate updated to latest version [PCPMRVF-17]
@@ -72,7 +72,7 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
   formats, since formats are regular expressions [PCPMRVF-11]
   http://logiclab.jira.com/browse/PCPMRVF-11
-  
+
   WARNING! this might require changes to your current configuration
 
 - Corrected broken example in POD [PCPMRVF-12]
