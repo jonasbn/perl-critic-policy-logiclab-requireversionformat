@@ -1,5 +1,6 @@
 NAME
-    Perl::Critic::Policy::logicLAB::RequireVersionFormat
+    Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version
+    number formats
 
 AFFILIATION
     This policy is part of Perl::Critic::logicLAB distribution.
