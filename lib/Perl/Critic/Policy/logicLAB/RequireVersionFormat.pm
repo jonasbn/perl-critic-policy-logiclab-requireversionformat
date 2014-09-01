@@ -159,6 +159,14 @@ __END__
 
 =pod
 
+=begin markdown
+
+[![CPAN version](https://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-RequireVersionFormat.svg)](http://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-RequireVersionFormat)
+[![Build Status](https://travis-ci.org/jonasbn/pcpmrvf.svg?branch=master)](https://travis-ci.org/jonasbn/pcpmrvf)
+[![Coverage Status](https://coveralls.io/repos/jonasbn/pcpmrvf/badge.png)](https://coveralls.io/r/jonasbn/pcpmrvf)
+
+=end markdown
+
 =head1 NAME
 
 Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
