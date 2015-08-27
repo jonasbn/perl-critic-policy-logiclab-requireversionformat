@@ -11,7 +11,7 @@ use List::MoreUtils qw(any);
 use Carp qw(carp croak);
 use 5.008;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
@@ -360,7 +360,7 @@ The following policies have been disabled for this distribution
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2009-2014 Jonas B. Nielsen. All rights reserved.
+Copyright (c) 2009-2015 Jonas B. Nielsen. All rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 

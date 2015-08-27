@@ -3,9 +3,12 @@ Changes file for Perl::Critic::Policy::logicLAB::RequireVersionFormat
 Project Change Log:
 http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
-0.07 2014-08-11
+0.08 2014-08-27 Maintenance release, update not required
 
-- Maintenance release, update not required
+- Migrated from Module::Build to Dist::Zilla
+
+
+0.07 2014-08-11 Maintenance release, update not required
 
 - Added abstract to POD as pointed out by CPANTS for release 0.06
 
@@ -18,9 +21,7 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
   https://logiclab.jira.com/browse/PCPMRVF-21
 
 
-0.05 2014-01-18
-
-- Maintenance release, update not required
+0.05 2014-01-18 Maintenance release, update not required
 
 - Addressed several issues listed on CPANTS, all for version 0.04 and
   earlier:
@@ -36,9 +37,7 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
   https://logiclab.jira.com/browse/PCPMRVF-20
 
 
-0.04 2013-07-28
-
-- Maintenance release, update not required
+0.04 2013-07-28 Maintenance release, update not required
 
 - Fixed up Changes file as part of my Questhub quest adhering to the standard
   described in: CPAN::Changes::Spec [PCPMRVF-19]
@@ -57,17 +56,13 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
   https://logiclab.jira.com/browse/PCPMRVF-18
 
 
-0.03 2011-02-13
-
-- Bug fix release, update not required
+0.03 2011-02-13 Bug fix release, update not required
 
 - Addressed report on failing test, we now explicitly require Perl::Critic version 1.03 [PCPMRVF-15]
   http://logicLAB.jira.com/browse/PCPMRVF-15
 
 
-0.02 2010-09-18
-
-- Feature release, update recommended
+0.02 2010-09-18 Feature release, update recommended
 
 - Exchanged formats delimeter from '|' to '||', since '|' could be used in
   formats, since formats are regular expressions [PCPMRVF-11]
@@ -79,6 +74,6 @@ http://logiclab.jira.com/browse/PCPMRVF#selectedTab=com.atlassian.jira.plugin.sy
   http://logiclab.jira.com/browse/PCPMRVF-12
 
 
-0.01 2010-09-07
+0.01 2010-09-07 Initial release
 
 - Initial release
