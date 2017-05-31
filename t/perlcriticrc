@@ -17,5 +17,3 @@ allow_leading_tabs = 0
 [-NamingConventions::Capitalization]
 
 [-Documentation::RequirePodLinksIncludeText]
-
-[-Bangs::ProhibitFlagComments]
