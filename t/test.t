@@ -1,6 +1,4 @@
 
-# $Id$
-
 use strict;
 use warnings;
 use Test::More tests => 44;
@@ -16,9 +14,9 @@ my $critic = Perl::Critic->new(
 );
 {
     my $str = q[$VERSION = '0.0.1'];
-    
+
     my @violations = $critic->critique( \$str );
-    
+
     is(scalar @violations, 0);
 }
 
@@ -44,7 +42,7 @@ foreach (@lines) {
     my @violations = $critic->critique( \$str );
     foreach (@violations) {
         is( $_->description, q{"$VERSION" variable not conforming} );
-        
+
         if (0) {
             warn "$str: $_->description\n";
         }
