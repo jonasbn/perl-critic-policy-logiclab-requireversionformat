@@ -5,7 +5,7 @@ package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 use strict;
 use warnings;
 use base
-  qw(Perl::Critic::Policy::Modules::RequireVersionVar Perl::Critic::Policy);
+    qw(Perl::Critic::Policy::Modules::RequireVersionVar Perl::Critic::Policy);
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans };
 use List::MoreUtils qw(any);
 use Carp qw(carp croak);
@@ -15,7 +15,7 @@ our $VERSION = '0.08';
 
 ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
-  q{"$VERSION" variable should conform with the configured};
+    q{"$VERSION" variable should conform with the configured};
 Readonly::Scalar my $DESC => q{"$VERSION" variable not conforming};
 ## critic [ValuesAndExpressions::RequireInterpolationOfMetachars]
 use constant supported_parameters => qw(strict_quotes ignore_quotes formats);
@@ -24,15 +24,15 @@ use constant default_themes       => qw(logiclab);
 use constant applies_to           => 'PPI::Document';
 
 my @strip_tokens = qw(
-  PPI::Token::Structure
-  PPI::Token::Whitespace
+    PPI::Token::Structure
+    PPI::Token::Whitespace
 );
 
 my @parsable_tokens = qw(
-  PPI::Token::Quote::Double
-  PPI::Token::Quote::Single
-  PPI::Token::Number::Float
-  PPI::Token::Number::Version
+    PPI::Token::Quote::Double
+    PPI::Token::Quote::Single
+    PPI::Token::Number::Float
+    PPI::Token::Number::Version
 );
 
 sub violates {
@@ -41,7 +41,8 @@ sub violates {
     my $version_spec = q{};
     my $separator;
 
-    if ( my $stmt = $doc->find_first( \&_is_version_declaration_statement ) ) {
+    if ( my $stmt = $doc->find_first( \&_is_version_declaration_statement ) )
+    {
 
         my $tokenizer = PPI::Tokenizer->new( \$stmt );
         my $tokens    = $tokenizer->all_tokens;
@@ -148,7 +149,7 @@ sub _is_vars_package_version {
     $elem->isa('PPI::Statement') || return 0;
     return any {
         $_->isa('PPI::Token::Symbol')
-          and $_->content =~ m{ \A \$(\S+::)*VERSION \z }xms;
+            and $_->content =~ m{ \A \$(\S+::)*VERSION \z }xms;
     }
     $elem->children();
 }
