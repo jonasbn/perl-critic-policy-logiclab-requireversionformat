@@ -1,7 +1,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 44;
+use Test::More;
 use Env qw($TEST_VERBOSE);
 
 use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
@@ -38,7 +38,8 @@ $critic = Perl::Critic->new(
 my @lines = <DATA>;
 my $i = 1;
 foreach (@lines) {
-    my ($want_count, $str) = split /\t/;
+    # 4 spaces
+    my ($want_count, $str) = split /    /;
     my @violations = $critic->critique( \$str );
     foreach (@violations) {
         is( $_->description, q{"$VERSION" variable not conforming} );
@@ -60,34 +61,44 @@ foreach (@lines) {
     $i++;
 }
 
+done_testing();
+
 exit 0;
 
+# 1 means violation
+# 0 means no violation
+# See t/example.conf for configuration of policy
+# separation between policy flag and perl string is 4 spaces
+
 __DATA__
-0	our $VERSION = "0.01";}
-0	$VERSION = "0.01";
-0	our $VERSION = '0.01_1';
-0	$VERSION = '0.01_1';
-0	our $VERSION = '0.01';
-0	$VERSION = '0.01';
-0	our $VERSION = 0.01;
-0	$VERSION = 0.01;
-0	our $VERSION = 1.0611;
-0	$MyPackage::VERSION = 1.061;
-0	use vars qw($VERSION);
-0	use version; our $VERSION = qv(1.0611);
-0	Readonly our $VERSION = 1.0;
-0	Readonly::Scalar our $VERSION = 1.0;
-1	our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
-0	our $VERSION = $Other::VERSION;
-1	our $VERSION = "0.0.1";
-1	$VERSION = "0.0.1";
-1	our $VERSION = '0.0.1';
-1	$VERSION = '0.0.1';
-1	our $VERSION = 0.0.1;
-1	$VERSION = 0.0.1;
-1	our $VERSION = 1.0.611;
-1	$MyPackage::VERSION = 1.0.61;
-1	use version; our $VERSION = qv(1.0.611);
-1	Readonly our $VERSION = 1.0.1;
-1	our $VERSION = "0.01a";
-1	$VERSION = "0.01a";
+0    our $VERSION = "0.01";}
+0    $VERSION = "0.01";
+0    our $VERSION = '0.01_1';
+0    $VERSION = '0.01_1';
+0    our $VERSION = '0.01';
+0    $VERSION = '0.01';
+0    our $VERSION = 0.01;
+0    $VERSION = 0.01;
+0    our $VERSION = 1.0611;
+0    $MyPackage::VERSION = 1.061;
+0    use vars qw($VERSION);
+0    use version; our $VERSION = qv(1.0611);
+0    Readonly our $VERSION = 1.0;
+0    Readonly::Scalar our $VERSION = 1.0;
+1    our ($VERSION) = '$Revision$' =~ m{ \$Revision: \s+ (\S+) }x;
+0    our $VERSION = $Other::VERSION;
+1    our $VERSION = "0.0.1";
+1    $VERSION = "0.0.1";
+1    our $VERSION = '0.0.1';
+1    $VERSION = '0.0.1';
+1    our $VERSION = 0.0.1;
+1    $VERSION = 0.0.1;
+1    our $VERSION = 1.0.611;
+1    $MyPackage::VERSION = 1.0.61;
+1    use version; our $VERSION = qv(1.0.611);
+1    Readonly our $VERSION = 1.0.1;
+1    our $VERSION = "0.01a";
+1    $VERSION = "0.01a";
+1    use version; our $VERSION = version->declare("v1.1.0");
+1    use version; our $VERSION = version->declare("v1.10");
+0    use version; our $VERSION = version->declare("1.10");
