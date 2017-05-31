@@ -1,7 +1,5 @@
 package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
-# $Id$
-
 use strict;
 use warnings;
 use base
