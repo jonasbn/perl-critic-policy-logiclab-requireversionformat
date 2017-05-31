@@ -48,7 +48,7 @@ would cause a violation.
 ## EXCEPTIONS
 
 In addition there are some special cases, were we simply ignore the version,
-since we cannot assert it in a reasonable manner. 
+since we cannot assert it in a reasonable manner.
 
 - our $VERSION = $Other::VERSION;
 
