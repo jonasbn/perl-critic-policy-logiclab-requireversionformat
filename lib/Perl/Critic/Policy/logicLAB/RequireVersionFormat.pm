@@ -156,6 +156,8 @@ sub _is_vars_package_version {
 
 1;
 
+## no critic (Bangs::ProhibitFlagComments)
+
 __END__
 
 =pod
@@ -227,7 +229,7 @@ would cause a violation.
 =head2 EXCEPTIONS
 
 In addition there are some special cases, were we simply ignore the version,
-since we cannot assert it in a reasonable manner. 
+since we cannot assert it in a reasonable manner.
 
 =over
 
