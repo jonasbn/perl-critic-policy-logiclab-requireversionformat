@@ -4,7 +4,7 @@ verbose  = 8
 
 #------------------------------------------------------------------------------
 
-[CodeLayout::RequireTidyCode]
+[-CodeLayout::RequireTidyCode]
 
 [Documentation::RequirePodSections]
 lib_sections    = NAME|AFFILIATION|VERSION|DESCRIPTION|CONFIGURATION AND ENVIRONMENT|DEPENDENCIES AND REQUIREMENTS|INCOMPATIBILITIES|BUGS AND LIMITATIONS|BUG REPORTING|TEST AND QUALITY|SEE ALSO|AUTHOR|LICENSE AND COPYRIGHT
