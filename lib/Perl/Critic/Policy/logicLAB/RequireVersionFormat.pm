@@ -11,11 +11,10 @@ use 5.008;
 
 our $VERSION = '0.08';
 
-## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
 Readonly::Scalar my $EXPL =>
     q{"$VERSION" variable should conform with the configured};
 Readonly::Scalar my $DESC => q{"$VERSION" variable not conforming};
-## critic [ValuesAndExpressions::RequireInterpolationOfMetachars]
+
 use constant supported_parameters => qw(strict_quotes ignore_quotes formats);
 use constant default_severity     => $SEVERITY_MEDIUM;
 use constant default_themes       => qw(logiclab);
@@ -102,7 +101,7 @@ sub initialize_if_enabled {
 sub _extract_version {
     my ( $self, $tokens ) = @_;
 
-    ##stripping whitespace and structure tokens
+    # Stripping whitespace and structure tokens
     my $i = 0;
     foreach my $t ( @{$tokens} ) {
         if ( any { ref $t eq $_ } @strip_tokens ) {
@@ -111,7 +110,7 @@ sub _extract_version {
         $i++;
     }
 
-    #Trying to locate and match version containing token
+    # Trying to locate and match version containing token
     foreach my $t ( @{$tokens} ) {
         if ( any { ref $t eq $_ } @parsable_tokens ) {
             if ( $t->{separator} ) {
@@ -137,7 +136,7 @@ sub _is_our_version {
     return if not $elem;
     $elem->isa('PPI::Statement::Variable') || return 0;
     $elem->type() eq 'our' || return 0;
-    ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
+
     return any { $_ eq '$VERSION' } $elem->variables();
 }
 
@@ -153,8 +152,6 @@ sub _is_vars_package_version {
 }
 
 1;
-
-## no critic (Bangs::ProhibitFlagComments)
 
 __END__
 
