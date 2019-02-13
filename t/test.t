@@ -4,13 +4,13 @@ use warnings;
 use Test::More;
 use Env qw($TEST_VERBOSE);
 
-use_ok 'Perl::Critic::Policy::logicLAB::RequireVersionFormat';
+use_ok 'Perl::Critic::Policy::Module::RequireVersionFormat';
 
 require Perl::Critic;
 
 my $critic = Perl::Critic->new(
     '-profile'       => 't/example.conf',
-    '-single-policy' => 'logicLAB::RequireVersionFormat'
+    '-single-policy' => 'Module::RequireVersionFormat'
 );
 {
     my $str = q[$VERSION = '0.0.1'];
@@ -22,7 +22,7 @@ my $critic = Perl::Critic->new(
 
 $critic = Perl::Critic->new(
     '-profile'       => '',
-    '-single-policy' => 'logicLAB::RequireVersionFormat'
+    '-single-policy' => 'Module::RequireVersionFormat'
 );
 {
     my @p = $critic->policies;
