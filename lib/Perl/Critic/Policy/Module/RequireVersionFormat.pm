@@ -358,7 +358,7 @@ The following policies have been disabled for this distribution
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2009-2015 Jonas B. (jonasbn) All rights reserved.
+Copyright (c) 2009-2019 Jonas B. (jonasbn) All rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
