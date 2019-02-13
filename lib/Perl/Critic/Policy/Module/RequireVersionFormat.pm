@@ -17,7 +17,7 @@ Readonly::Scalar my $DESC => q{"$VERSION" variable not conforming};
 
 use constant supported_parameters => qw(strict_quotes ignore_quotes formats);
 use constant default_severity     => $SEVERITY_MEDIUM;
-use constant default_themes       => qw(logiclab);
+use constant default_themes       => qw(logiclab cosmetic);
 use constant applies_to           => 'PPI::Document';
 
 my @strip_tokens = qw(
