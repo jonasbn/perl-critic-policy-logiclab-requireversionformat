@@ -2,7 +2,7 @@ requires 'Carp';
 requires 'Readonly';
 requires 'Perl::Critic::Policy';
 requires 'Perl::Critic::Utils';
-requires 'perl', '5.014';
+requires 'perl', '5.37.11';
 requires 'Data::Dumper';
 requires 'List::MoreUtils';
 
