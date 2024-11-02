@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::Module::RequireVersionFormat;
+package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
 use strict;
 use warnings;
@@ -167,7 +167,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::Module::RequireVersionFormat - assert version number formats
+Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
 
 =head1 AFFILIATION
 
@@ -245,7 +245,7 @@ Strict quotes enforces that you version number must be quoted, like so:
 would also go for any additional formats you could configure as valid using
 the L</formats> parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     strict_quotes = 1
 
 =head2 ignore_quotes
@@ -259,7 +259,7 @@ default format since quotes are not specifed as part of the pattern. This
 would also go for any additional formats you could configure as valid using
 the L</formats> parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     ignore_quotes = 0
 
 =head2 formats
@@ -268,7 +268,7 @@ If no formats are specified, the policy only enforces the default format
 mentioned in L</DESCRIPTION> in combination with the above two configuration
 parameters of course.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     formats = \A\d+\.\d+(_\d+)?\z || \Av\d+\.\d+\.\d+\z
 
 =head1 DEPENDENCIES AND REQUIREMENTS
