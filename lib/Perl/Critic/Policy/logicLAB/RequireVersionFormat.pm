@@ -182,7 +182,7 @@ This documentation describes version 0.05
 This policy asserts that a specified version number conforms to a specified
 format.
 
-The default format is the defacto format used on CPAN. X.X and X.X_X where X
+The default format is the de facto format used on CPAN. X.X and X.X_X where X
 is an arbitrary integer, in the code this is expressed using the following
 regular expression:
 
@@ -255,7 +255,7 @@ Ignore quotes is on by default.
 0.01, '0.01' and "0.01" would be interpreted as the same.
 
 Disabling ignore quotes, would mean that: '0.01' and "0.01" would violate the
-default format since quotes are not specifed as part of the pattern. This
+default format since quotes are not specified as part of the pattern. This
 would also go for any additional formats you could configure as valid using
 the L</formats> parameter below.
 
@@ -301,7 +301,7 @@ I am however still undecided.
 
 =head1 BUG REPORTING
 
-Please use Requets Tracker for bug reporting:
+Please use Request Tracker for bug reporting:
 
         http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat
 
