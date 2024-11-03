@@ -19,3 +19,8 @@ allow_leading_tabs = 0
 [-Documentation::RequirePodLinksIncludeText]
 
 [-ValuesAndExpressions::RequireInterpolationOfMetachars]
+
+[Documentation::PodSpelling]
+stop_words_file = .github/wordlist.txt
+
+[-Modules::RequireVersionVar]
