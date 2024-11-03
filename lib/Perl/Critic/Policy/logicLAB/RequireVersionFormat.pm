@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::Module::RequireVersionFormat;
+package Perl::Critic::Policy::logicLAB::RequireVersionFormat;
 
 use strict;
 use warnings;
@@ -167,7 +167,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::Module::RequireVersionFormat - assert version number formats
+Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
 
 =head1 AFFILIATION
 
@@ -182,7 +182,7 @@ This documentation describes version 0.05
 This policy asserts that a specified version number conforms to a specified
 format.
 
-The default format is the defacto format used on CPAN. X.X and X.X_X where X
+The default format is the de facto format used on CPAN. X.X and X.X_X where X
 is an arbitrary integer, in the code this is expressed using the following
 regular expression:
 
@@ -245,7 +245,7 @@ Strict quotes enforces that you version number must be quoted, like so:
 would also go for any additional formats you could configure as valid using
 the L</formats> parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     strict_quotes = 1
 
 =head2 ignore_quotes
@@ -255,11 +255,11 @@ Ignore quotes is on by default.
 0.01, '0.01' and "0.01" would be interpreted as the same.
 
 Disabling ignore quotes, would mean that: '0.01' and "0.01" would violate the
-default format since quotes are not specifed as part of the pattern. This
+default format since quotes are not specified as part of the pattern. This
 would also go for any additional formats you could configure as valid using
 the L</formats> parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     ignore_quotes = 0
 
 =head2 formats
@@ -268,7 +268,7 @@ If no formats are specified, the policy only enforces the default format
 mentioned in L</DESCRIPTION> in combination with the above two configuration
 parameters of course.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     formats = \A\d+\.\d+(_\d+)?\z || \Av\d+\.\d+\.\d+\z
 
 =head1 DEPENDENCIES AND REQUIREMENTS
@@ -301,7 +301,7 @@ I am however still undecided.
 
 =head1 BUG REPORTING
 
-Please use Requets Tracker for bug reporting:
+Please use Request Tracker for bug reporting:
 
         http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat
 

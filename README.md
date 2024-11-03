@@ -4,11 +4,11 @@
 
 # NAME
 
-Perl::Critic::Policy::Module::RequireVersionFormat - assert version number formats
+Perl::Critic::Policy::logicLAB::RequireVersionFormat - assert version number formats
 
 # AFFILIATION
 
-This policy is part of [Perl::Critic::logicLAB](https://metacpan.org/pod/Perl::Critic::logicLAB) distribution.
+This policy is part of [Perl::Critic::logicLAB](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3AlogicLAB) distribution.
 
 # VERSION
 
@@ -19,7 +19,7 @@ This documentation describes version 0.05
 This policy asserts that a specified version number conforms to a specified
 format.
 
-The default format is the defacto format used on CPAN. X.X and X.X\_X where X
+The default format is the de facto format used on CPAN. X.X and X.X\_X where X
 is an arbitrary integer, in the code this is expressed using the following
 regular expression:
 
@@ -65,7 +65,7 @@ Strict quotes enforces that you version number must be quoted, like so:
 would also go for any additional formats you could configure as valid using
 the ["formats"](#formats) parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     strict_quotes = 1
 
 ## ignore\_quotes
@@ -75,11 +75,11 @@ Ignore quotes is on by default.
 0.01, '0.01' and "0.01" would be interpreted as the same.
 
 Disabling ignore quotes, would mean that: '0.01' and "0.01" would violate the
-default format since quotes are not specifed as part of the pattern. This
+default format since quotes are not specified as part of the pattern. This
 would also go for any additional formats you could configure as valid using
 the ["formats"](#formats) parameter below.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     ignore_quotes = 0
 
 ## formats
@@ -88,16 +88,16 @@ If no formats are specified, the policy only enforces the default format
 mentioned in ["DESCRIPTION"](#description) in combination with the above two configuration
 parameters of course.
 
-    [Module::RequireVersionFormat]
+    [logicLAB::RequireVersionFormat]
     formats = \A\d+\.\d+(_\d+)?\z || \Av\d+\.\d+\.\d+\z
 
 # DEPENDENCIES AND REQUIREMENTS
 
-- [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
-- [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
+- [Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic)
+- [Perl::Critic::Utils](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3AUtils)
 - [Readonly](https://metacpan.org/pod/Readonly)
-- [Test::More](https://metacpan.org/pod/Test::More)
-- [Test::Perl::Critic](https://metacpan.org/pod/Test::Perl::Critic)
+- [Test::More](https://metacpan.org/pod/Test%3A%3AMore)
+- [Test::Perl::Critic](https://metacpan.org/pod/Test%3A%3APerl%3A%3ACritic)
 
 # INCOMPATIBILITIES
 
@@ -113,7 +113,7 @@ I am however still undecided.
 
 # BUG REPORTING
 
-Please use Requets Tracker for bug reporting:
+Please use Request Tracker for bug reporting:
 
         http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-logicLAB-Prohibit-RequireVersionFormat
 
@@ -121,8 +121,8 @@ Please use Requets Tracker for bug reporting:
 
 The following policies have been disabled for this distribution
 
-- [Perl::Crititc::Policy::ValuesAndExpressions::ProhibitConstantPragma](https://metacpan.org/pod/Perl::Crititc::Policy::ValuesAndExpressions::ProhibitConstantPragma)
-- [Perl::Crititc::Policy::NamingConventions::Capitalization](https://metacpan.org/pod/Perl::Crititc::Policy::NamingConventions::Capitalization)
+- [Perl::Crititc::Policy::ValuesAndExpressions::ProhibitConstantPragma](https://metacpan.org/pod/Perl%3A%3ACrititc%3A%3APolicy%3A%3AValuesAndExpressions%3A%3AProhibitConstantPragma)
+- [Perl::Crititc::Policy::NamingConventions::Capitalization](https://metacpan.org/pod/Perl%3A%3ACrititc%3A%3APolicy%3A%3ANamingConventions%3A%3ACapitalization)
 
 ## TEST COVERAGE
 
@@ -135,7 +135,7 @@ The following policies have been disabled for this distribution
 
 # TODO
 
-- I would like to integrate the features of this policy into [Perl::Critic::Policy::Modules::RequireVersionVar](https://metacpan.org/pod/Perl::Critic::Policy::Modules::RequireVersionVar), but I was aiming for a proof of concept first - so this planned patch is still in the pipeline.
+- I would like to integrate the features of this policy into [Perl::Critic::Policy::Modules::RequireVersionVar](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3APolicy%3A%3AModules%3A%3ARequireVersionVar), but I was aiming for a proof of concept first - so this planned patch is still in the pipeline.
 - Address the limitation listed in ["BUGS AND LIMITATIONS"](#bugs-and-limitations).
 
 # SEE ALSO
